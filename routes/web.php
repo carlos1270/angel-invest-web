@@ -43,7 +43,6 @@ Route::middleware([
     })->name('chat');
 
     Route::get('/chat', ChatController::class)->name('chat.index');
-    
     Route::resource('startups', StartupController::class);
 
     Route::get('/get-component', [StartupController::class, 'startupGetComponent'])->name('startup.component.ajax');
